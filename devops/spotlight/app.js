@@ -51,7 +51,7 @@ const EDITIONS = [
     title: "Segurança e Encerramento da migração",                              // tema da edição
     date: "2026-05-15",                     // data da apresentação
     period: { start: "2026-05-01", end: "2026-05-15" },
-    presentationUrl: "edition-03/spotlight.html",
+    presentationUrl: "edition-03/devops-03.pptx",
     cards: [
       { title: "Pipeline de CI configurado",        description: "Pipeline YAML no Azure DevOps com stages de build, test e publish.", tag: "CI/CD" },
       { title: "Deploy automático em staging",      description: "Release pipeline com artefato versionado e aprovação antes de prod.",  tag: "Deploy" },
