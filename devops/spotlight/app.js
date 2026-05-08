@@ -60,6 +60,13 @@ const EDITIONS = [
       { title: "Secrets no Key Vault",              description: "Migração de credenciais hardcoded para Azure Key Vault.",              tag: "Segurança" },
     ],
   },
+  {
+    number: 4,
+    title: "",
+    date: "2026-06-05",
+    period: { start: "2026-05-15", end: "2026-06-05" },
+    presentationUrl: null,
+  },
 ];
 
 // ============================================================
@@ -246,4 +253,34 @@ function handleKey(e) {
   }
 }
 
+// ─── Shortcuts Bar ───────────────────────────────────────
+
+function renderShortcuts(editions) {
+  const navigable = editions
+    .filter(e => e.status !== "planejada")
+    .sort((a, b) => a.number - b.number);
+  const planned = editions
+    .filter(e => e.status === "planejada")
+    .sort((a, b) => a.number - b.number);
+
+  let html = "";
+
+  if (navigable.length) {
+    const kbds = navigable.map(e => `<kbd>${e.number}</kbd>`).join("");
+    html += `<span class="shortcut-group">${kbds} Ir para edição</span>`;
+  }
+
+  planned.forEach(e => {
+    const num = String(e.number).padStart(2, "0");
+    html += `<span class="shortcut-group"><kbd>${e.number}</kbd> Edição #${num} (em breve)</span>`;
+  });
+
+  html += `<span class="shortcut-group"><kbd>←</kbd><kbd>→</kbd> Navegar cards</span>`;
+  html += `<span class="shortcut-group"><kbd>Enter</kbd> Abrir Spotlight</span>`;
+  html += `<span class="shortcut-group"><kbd>Esc</kbd> Fechar modal</span>`;
+
+  document.getElementById("shortcuts-inner").innerHTML = html;
+}
+
 render();
+renderShortcuts(computeStatuses(EDITIONS));
