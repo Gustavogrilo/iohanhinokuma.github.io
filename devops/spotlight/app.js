@@ -50,14 +50,15 @@ const EDITIONS = [
     number: 3,
     title: "Segurança e Encerramento da migração",                              // tema da edição
     date: "2026-05-15",                     // data da apresentação
-    period: { start: "2026-05-01", end: "2026-05-15" },
+    period: { start: "2026-04-24", end: "2026-05-15" },
     presentationUrl: "edition-03/spotlight.html",
     cards: [
-      { title: "Pipeline de CI configurado",        description: "Pipeline YAML no Azure DevOps com stages de build, test e publish.", tag: "CI/CD" },
-      { title: "Deploy automático em staging",      description: "Release pipeline com artefato versionado e aprovação antes de prod.",  tag: "Deploy" },
-      { title: "Infraestrutura como código",        description: "Terraform para App Service, Storage e Key Vault com state remoto.",    tag: "Infraestrutura" },
-      { title: "Dashboard de monitoramento",        description: "Azure Monitor com alertas de falha de build e deploy.",                tag: "Monitoramento" },
-      { title: "Secrets no Key Vault",              description: "Migração de credenciais hardcoded para Azure Key Vault.",              tag: "Segurança" },
+      { title: "Pipelines CMS, Front e API",        description: "Correção e ajuste dos pipelines de build no ambiente dev para CMS, Front e API Agrotrace.", tag: "CI/CD" },
+      { title: "Migração Checkmilk e Checkwork",    description: "Migração dos serviços Checkmilk e Checkwork para o novo ambiente dev com backups automatizados.", tag: "Infraestrutura" },
+      { title: "WireGuard VPN distribuída",         description: "Credenciais VPN geradas e distribuídas para Carlos, Elias, Matheus e Thielson. HiveMQ preparado via Terraform.", tag: "Segurança" },
+      { title: "Integração PRODES/IBAMA",           description: "Importação de Cars, PRODES e IBAMA no Agroplus. Validação de dados e ajuste de Bioma no cadastro de propriedade.", tag: "Infraestrutura" },
+      { title: "Laudos Biodiesel-Soja",             description: "Ajustes no card #11729 com nova regra de validação. Testes de autenticação CAR e variáveis numéricas concluídos.", tag: "Deploy" },
+      { title: "App Mobile — 2 PRs mergeados",      description: "PR #10783 (remove temas sem perguntas) e PR #10788 (corrige listagem de propriedades no formulário dinâmico).", tag: "Deploy" },
     ],
   },
   {
