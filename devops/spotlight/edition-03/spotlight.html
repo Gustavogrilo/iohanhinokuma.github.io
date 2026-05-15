@@ -139,14 +139,6 @@
               <td>Suportes &amp; TI Geral</td>
             </tr>
             <tr>
-              <td class="a-who">Iohan</td>
-              <td>Kubernetes, Socioambiental &amp; Checkmilk — semana 2</td>
-            </tr>
-            <tr>
-              <td class="a-who">Lucas</td>
-              <td>Let's Encrypt, AKS &amp; Cloudflare — semana 2</td>
-            </tr>
-            <tr>
               <td class="a-who">Todos</td>
               <td>Roadmap + Conquistas</td>
             </tr>
@@ -212,10 +204,10 @@
           <span class="card-id">devops / pipelines</span>
           <span class="card-tag ct-ci">CI/CD</span>
         </div>
-        <h2 class="card-slide-title">Pipelines &amp; Deploy — CMS, Front e API</h2>
+        <h2 class="card-slide-title">Pipelines, Kubernetes &amp; Checkmilk</h2>
         <div class="card-body triple">
           <div class="card-section problem">
-            <div class="section-label">❌ problema</div>
+            <div class="section-label">❌ situação anterior</div>
             <ul>
               <li>Pipelines desatualizados no ambiente dev</li>
               <li>Build inconsistente entre CMS, Front e API</li>
@@ -223,17 +215,23 @@
             </ul>
           </div>
           <div class="card-section solution">
-            <div class="section-label">✓ realizado</div>
+            <div class="section-label">✓ realizado — pipelines</div>
             <ul>
               <li>Correção dos pipelines de CMS, Front e API Agrotrace</li>
               <li>Ajuste nos pipelines de build em dev</li>
               <li>Deploy de atualizações das landing pages</li>
+              <li>Fix pipeline dev — Checkmilk</li>
+              <li>#12307 — Fix label gráfico home — Checkmilk</li>
               <li>1:1 com Ronaldo — ajustes deploy CMS dev</li>
             </ul>
           </div>
           <div class="card-section impact">
-            <div class="section-label">📈 impacto</div>
-            <p>Ambiente dev estável com builds consistentes para os 3 serviços principais do Agrotrace.</p>
+            <div class="section-label">🏗 infraestrutura</div>
+            <ul>
+              <li>Kubernetes atualizado em produção</li>
+              <li>Reduzir 1 node — ambiente dev antigo</li>
+              <li>Ambiente dev estável com builds consistentes para os 3 serviços principais</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -248,73 +246,37 @@
           <span class="card-id">agroplus / integrações</span>
           <span class="card-tag ct-sec">Integração</span>
         </div>
-        <h2 class="card-slide-title">Integração PRODES/IBAMA — Agroplus</h2>
+        <h2 class="card-slide-title">Integrações, Socioambiental &amp; Reuniões</h2>
         <div class="card-body triple">
           <div class="card-section solution">
-            <div class="section-label">✓ realizado</div>
+            <div class="section-label">✓ integrações &amp; testes</div>
             <ul>
               <li>Importação de <strong>Cars</strong>, <strong>PRODES</strong> e <strong>IBAMA</strong> no Agroplus</li>
-              <li>Validação dos dados consumidos do PRODES</li>
               <li>#12245 — Descrição do Bioma no cadastro da propriedade</li>
               <li>#12262 — Download CAR estadual</li>
-            </ul>
-          </div>
-          <div class="card-section note">
-            <div class="section-label">🔄 em andamento — ronaldo</div>
-            <ul>
-              <li>Indicadores de sustentabilidade</li>
-              <li>Migração API Evolution</li>
-              <li>Melhorias no dashboard Carbono</li>
-            </ul>
-          </div>
-          <div class="card-section impact">
-            <div class="section-label">📋 contexto</div>
-            <p>Reunião com Ricardo e Ronaldo para alinhamento. Dados ambientais integrados ao Agroplus para consulta georreferenciada.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── 06 · Iohan — Semana 2 ────────────────────────── -->
-      <section class="slide slide-card"
-               data-file="iohan-semana2.md"
-               data-icon="🔧"
-               data-section="IOHAN"
-               data-presenter="Iohan">
-        <div class="card-meta">
-          <span class="card-id">devops / semana 2</span>
-          <span class="card-tag ct-infra">08 – 15/05</span>
-        </div>
-        <h2 class="card-slide-title">Kubernetes, Socioambiental &amp; Checkmilk</h2>
-        <div class="card-body triple">
-          <div class="card-section solution">
-            <div class="section-label">⚙ cards &amp; fixes</div>
-            <ul>
-              <li>#12302 — Fluxos de investigação e importação de camadas — Agrotrace</li>
-              <li>#12307 — Fix label gráfico home — Checkmilk</li>
-              <li>Fix pipeline dev — Checkmilk</li>
-              <li>Testes novas telas do Socioambiental</li>
+              <li>Testes novas telas do <strong>Socioambiental</strong></li>
+              <li>#12302 — Fluxos de investigação e importação de camadas</li>
               <li>Atendimento Denys — Ajustes dados Formulário</li>
-              <li>Atendimento Heloisa Sabino — Problemas ao salvar respostas (Agroplus)</li>
-            </ul>
-          </div>
-          <div class="card-section impact">
-            <div class="section-label">🏗 infraestrutura</div>
-            <ul>
-              <li>Atualizar versão Kubernetes — produção</li>
-              <li>Reduzir 1 node — ambiente dev antigo</li>
-              <li>Criar demandas Heloisa — GLPI / Azure</li>
-              <li>Análise de Posicionamento e Concorrentes IBS</li>
+              <li>Atendimento Heloisa — Problemas ao salvar respostas (Agroplus)</li>
             </ul>
           </div>
           <div class="card-section note">
             <div class="section-label">🤝 reuniões</div>
             <ul>
-              <li>Agroplus — Alinhamento Sincronismos e Lista de propriedades</li>
               <li>Agroplus / Douglas — Lançamento Análise Socioambiental</li>
               <li>AproSoja — Demandas e novas feats</li>
               <li>Agroplus / Heloisa — Demandas MT</li>
               <li>1:1 Ricardo — Onboarding Agrotrace</li>
               <li>1:1 Ronaldo — Socioambiental</li>
+              <li>Análise de Posicionamento e Concorrentes IBS</li>
+            </ul>
+          </div>
+          <div class="card-section impact">
+            <div class="section-label">🔄 em andamento — ronaldo</div>
+            <ul>
+              <li>Indicadores de sustentabilidade</li>
+              <li>Migração API Evolution</li>
+              <li>Melhorias no dashboard Carbono</li>
             </ul>
           </div>
         </div>
@@ -334,10 +296,10 @@
           <span class="card-id">infra / migração</span>
           <span class="card-tag ct-infra">Infraestrutura</span>
         </div>
-        <h2 class="card-slide-title">Migração do Ambiente Dev — Checkmilk e Checkwork</h2>
-        <div class="card-body">
+        <h2 class="card-slide-title">Migração do Ambiente Dev &amp; Segurança</h2>
+        <div class="card-body triple">
           <div class="card-section solution">
-            <div class="section-label">✓ realizado</div>
+            <div class="section-label">✓ migração</div>
             <ul>
               <li>Migração do <strong>Checkmilk</strong> para o novo ambiente de desenvolvimento</li>
               <li>Migração do <strong>Checkwork</strong> para o novo ambiente de desenvolvimento</li>
@@ -345,8 +307,18 @@
             </ul>
           </div>
           <div class="card-section impact">
-            <div class="section-label">📈 impacto</div>
-            <p>Todos os serviços principais agora operam no novo ambiente. Agrotrace, Checkmilk e Checkwork disponíveis para o time via VPN.</p>
+            <div class="section-label">🔒 segurança</div>
+            <ul>
+              <li>Ingress com certificado <strong>Let's Encrypt</strong> — ambiente dev</li>
+              <li>Atualização do <strong>AKS de produção</strong> sem downtime</li>
+            </ul>
+          </div>
+          <div class="card-section note">
+            <div class="section-label">📈 resultado</div>
+            <ul>
+              <li>Todos os serviços no novo ambiente — disponíveis via VPN</li>
+              <li>Comunicações dev com certificado válido pelos navegadores</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -361,66 +333,27 @@
           <span class="card-id">infra / segurança</span>
           <span class="card-tag ct-sec">Segurança</span>
         </div>
-        <h2 class="card-slide-title">Backups Automatizados, VPN e HiveMQ</h2>
+        <h2 class="card-slide-title">Backups, VPN, Cloudflare &amp; HiveMQ</h2>
         <div class="card-body triple">
           <div class="card-section solution">
-            <div class="section-label">💾 backups</div>
+            <div class="section-label">💾 backups &amp; vpn</div>
             <ul>
-              <li>Backups automatizados configurados no novo ambiente</li>
-              <li>Verificação de restores com notificação em produção</li>
-            </ul>
-          </div>
-          <div class="card-section impact">
-            <div class="section-label">🔐 vpn — wireguard</div>
-            <ul>
-              <li>Credenciais geradas e distribuídas:</li>
-              <li><strong>Carlos</strong></li>
-              <li><strong>Elias</strong></li>
-              <li><strong>Matheus</strong></li>
-              <li><strong>Thielson</strong></li>
-            </ul>
-          </div>
-          <div class="card-section note">
-            <div class="section-label">🔧 hivemq — terraform</div>
-            <p>Preparação da criação do broker HiveMQ via Terraform no novo ambiente. Próximo passo: provisionar e validar.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── 09 · Lucas — Semana 2 ────────────────────────── -->
-      <section class="slide slide-card"
-               data-file="lucas-semana2.md"
-               data-icon="🌐"
-               data-section="LUCAS"
-               data-presenter="Lucas">
-        <div class="card-meta">
-          <span class="card-id">infra / segurança</span>
-          <span class="card-tag ct-sec">08 – 15/05</span>
-        </div>
-        <h2 class="card-slide-title">Let's Encrypt, AKS &amp; Cloudflare</h2>
-        <div class="card-body triple">
-          <div class="card-section solution">
-            <div class="section-label">🔒 segurança</div>
-            <ul>
-              <li>Ingress com certificado <strong>Let's Encrypt</strong> — ambiente dev</li>
-              <li>Atualização do <strong>AKS de produção</strong> sem downtime</li>
+              <li>Backups automatizados com notificação de restore no Discord</li>
+              <li>Credenciais WireGuard geradas para: <strong>Carlos</strong>, <strong>Elias</strong>, <strong>Matheus</strong> e <strong>Thielson</strong></li>
             </ul>
           </div>
           <div class="card-section impact">
             <div class="section-label">🌐 cloudflare</div>
             <ul>
-              <li>Configuração de subdomínio dinâmico em dev</li>
-              <li>Integração com API da Cloudflare</li>
+              <li>Subdomínio dinâmico em dev via API da Cloudflare</li>
               <li>Deploy da LP em produção</li>
               <li>Alinhamento de alterações DNS com Iohan</li>
+              <li>Reunião — migração e armazenamento de Keys</li>
             </ul>
           </div>
           <div class="card-section note">
-            <div class="section-label">📋 alinhamentos</div>
-            <ul>
-              <li>Reunião — migração e armazenamento de Keys</li>
-              <li>Modificações e validações na Cloudflare</li>
-            </ul>
+            <div class="section-label">🔧 hivemq — terraform</div>
+            <p>Preparação da criação do broker HiveMQ via Terraform no novo ambiente. Próximo passo: provisionar e validar.</p>
           </div>
         </div>
       </section>
