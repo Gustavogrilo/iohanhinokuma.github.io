@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Spotlight — Edição #03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../spotlight.css">
+</head>
+<body>
+<div class="vscode">
+
+  <!-- ─── Title Bar ─────────────────────────────────────── -->
+  <div class="titlebar">
+    <a class="hub-link" href="../">⌂ hub</a>
+    <button class="timer-btn" id="timer-btn">▶ 00:00</button>
+  </div>
+
+  <!-- ─── Tab Bar ──────────────────────────────────────── -->
+  <div class="tabbar" id="tabbar"></div>
+
+  <!-- ─── Main ─────────────────────────────────────────── -->
+  <div class="main">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-section-title">EXPLORER</div>
+      <div id="sidebar-files"></div>
+    </div>
+
+    <!-- Slides -->
+    <div class="slides-container">
+
+      <!-- ── 01 · Capa ─────────────────────────────────── -->
+      <section class="slide slide-cover"
+               data-file="README.md"
+               data-icon="📋"
+               data-section=""
+               data-presenter="">
+        <div class="cover-left">
+          <div class="cover-edition">// DEVOPS SPOTLIGHT — EDITION #04</div>
+          <h1 class="cover-title">
+            Segurança &amp;<br>
+            <span class="hl">Migração</span>
+          </h1>
+          <div class="cover-meta">19 de junho de 2026 · 15/05 – 19/06</div>
+          <div class="cover-presenters">
+            <span class="presenter-chip">⚙ Iohan</span>
+            <span class="presenter-chip">🔒 Lucas</span>
+            <span class="presenter-chip">🧪 Thayse</span>
+            <span class="presenter-chip">🛠 Gustavo</span>
+          </div>
+          <div class="cover-stack">
+            <span class="stack-tag t-azure">Azure DevOps</span>
+            <span class="stack-tag t-terraform">Terraform</span>
+            <span class="stack-tag t-pwsh">WireGuard VPN</span>
+            <span class="stack-tag t-k8s">Agrotrace</span>
+          </div>
+        </div>
+        <div class="cover-right">
+          <div class="code-panel">
+            <div class="code-panel-header">
+              <span>📋</span>
+              <span>README.md — devops-sprint-04</span>
+            </div>
+            <div class="code-panel-body">
+<span class="c-comment"># DevOps Spotlight — Edição #03</span>
+<span class="c-comment">## 15/05 - 19/06/2026</span>
+
+<span class="c-kw">class</span> <span class="c-cls">DevOpsSpotlight</span> <span class="c-brace">{</span>
+  <span class="c-prop">edition</span>: <span class="c-num">4</span>
+  <span class="c-prop">theme</span>: <span class="c-str">"Segurança &amp; Migração"</span>
+  <span class="c-prop">team</span>: <span class="c-brace">[</span>
+    <span class="c-str">"Iohan"</span>, <span class="c-str">"Lucas"</span>,
+    <span class="c-str">"Thayse"</span>, <span class="c-str">"Gustavo"</span>
+  <span class="c-brace">]</span>
+  <span class="c-prop">cards</span>: <span class="c-num">146</span>
+  <span class="c-prop">prs</span>: <span class="c-num">3</span>
+<span class="c-brace">}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 02 · Agenda ───────────────────────────────── -->
+      <section class="slide slide-agenda"
+               data-file="agenda.ts"
+               data-icon="📅"
+               data-section=""
+               data-presenter="">
+        <div class="slide-header">
+          <span class="slide-label">agenda.ts</span>
+          <h2 class="slide-title">Agenda da Edição</h2>
+        </div>
+        <table class="agenda-table">
+          <thead>
+            <tr>
+              <th>Apresentador</th>
+              <th>Tópico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="a-who">Gustavo</td>
+              <td>Sprint em números</td>
+            </tr>
+            <tr>
+              <td class="a-who">Gustavo</td>
+              <td>Novos Projetos, edições, novidades<span class="demo-badge">+ demo</span></td>
+            </tr>
+            <tr>
+              <td class="a-who">Lucas</td>
+              <td>Ações no ambiente de desenvolvimento</td>
+            </tr>
+            <tr>
+              <td class="a-who">Lucas</td>
+              <td>Implantação do sistema OPS TOOLS </td>
+            </tr>
+            <tr>
+              <td class="a-who">Thayse</td>
+              <td>Laudos Biodiesel-Soja — ajustes e validações</td>
+            </tr>
+            <tr>
+              <td class="a-who">Thayse</td>
+              <td>Criação dos formulários do projeto Sanidade Citros</td>
+            </tr>
+            <tr>
+              <td class="a-who">Thayse</td>
+              <td>Testes do modulo PEC</td>
+            </tr>
+            <tr>
+              <td class="a-who">Thayse</td>
+              <td>Formulário de cadastro de Tickets</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ── 03 · Stats ────────────────────────────────── -->
+      <section class="slide slide-stats"
+               data-file="stats.json"
+               data-icon="📊"
+               data-section=""
+               data-presenter="Iohan">
+        <div class="slide-header">
+          <span class="slide-label">stats.json</span>
+          <h2 class="slide-title">Sprint em números</h2>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value">146</div>
+            <div class="stat-label">Cards concluídos</div>
+            <div class="stat-sub">113 associados · 13 em aberto</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">49</div>
+            <div class="stat-label">Demandas criadas</div>
+            <div class="stat-sub">34 atendidas · 15 abertas</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Tickets GLPI</div>
+            <div class="stat-sub">6 atendidos · 1 abertos</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           IOHAN
+      ════════════════════════════════════════════════════ -->
+
+      <!-- ── 04 · Pipelines & Deploy ───────────────────── -->
+      <section class="slide slide-card"
+               data-file="novidades.yml"
+               data-icon="⚙"
+               data-section="Gustavo"
+               data-presenter="Gustavo">
+        <div class="card-meta">
+          <span class="card-id">Projetos</span>
+          <span class="card-tag ct-ci">Novas entregas</span>
+        </div>
+        <h2 class="card-slide-title">Novos Projetos, edições, novidades</h2>
+        <div class="card-body triple">
+          <div class="card-section problem">
+            <div class="section-label">Situação anterior. Cards e tickets</div>
+            <ul>
+              <li>Tickets abertos pela Debora - GLPI</li>
+              <li>Tarefas criadas na Azure DevOps para cada edição e novas criações feitas</li>
+            </ul>
+          </div>
+          <div class="card-section solution">
+            <div class="section-label">✓ realizado</div>
+            <ul>
+              <li>Modificações no CARBONO</li>
+              <li>Organizar as colitiações - Dividir em cards pequenos</li>
+              <li>Melhorias no AproSoja - 5 Tickets atendidos desse projeto - Modifificações no protocolo / Form Dinmaico / Relatorio de DG</li>
+              <li>Criação de novo projeto - Qualificação leiteira sergipe - Com Form Dinamico</li>
+              <li>Fazer a criação do protocolo do CheckMilk dentro do Agrotrace</li>
+              <li>Edições no projeto CIC</li>
+              <li>Treinamentos para projetos - AgroPlus: Minas e Mato Grosso do Sul - Norte Pioneiro PR: Fagner</li>
+              <li>Ajuda com os testes do modulo PEC</li>
+              <li>Criar form dinamico para o projeto do Leite & Genetica do CheckMilk</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           LUCAS
+      ════════════════════════════════════════════════════ -->
+
+      <!-- ── 06 · Migração do Ambiente Dev ─────────────── -->
+      <section class="slide slide-card"
+               data-file="migracao-dev.md"
+               data-icon="🔄"
+               data-section="LUCAS"
+               data-presenter="Lucas">
+        <div class="card-meta">
+          <span class="card-id">infra / novidades</span>
+          <span class="card-tag ct-infra">Infraestrutura</span>
+        </div>
+        <h2 class="card-slide-title">Ações em ambiente de desenvolvimento:</h2>
+        <div class="card-body triple">
+          <div class="card-section solution">
+            <div class="section-label">✓ migração</div>
+            <ul>
+              <li>Deploy checkwork em dev - validado pelo Carlos</li>
+              <li>Finalização da migração completa do ambiente dev</li>
+            </ul>
+          </div>
+          <div class="card-section impact">
+            <div class="section-label">🔒 segurança</div>
+            <ul>
+              <li>Atualização de roteamento entre ambientes (VPN - DEV - OPS (ambiente de ferramentas de operação)</li>
+              <li>Migração do PSONO para Infisical</li>
+              <li>Scan de GitOps</li>
+            </ul>
+          </div>
+          <div class="card-section note">
+            <div class="section-label">📈 resultado</div>
+            <ul>
+              <li>Gestão de custo por workload</li>
+              <li>Automação de alertas via workflow</li>
+              <li>Auditoria de uso do ambiente</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 07 · Backups, VPN e HiveMQ ───────────────── -->
+      <section class="slide slide-card"
+               data-file="infra-vpn.md"
+               data-icon="🔒"
+               data-section="LUCAS"
+               data-presenter="Lucas">
+        <div class="card-meta">
+          <span class="card-id">infra / segurança</span>
+          <span class="card-tag ct-sec">Segurança</span>
+        </div>
+        <h2 class="card-slide-title">Implementação OPS TOOLS</h2>
+        <div class="card-body triple">
+          <div class="card-section solution">
+          <div class="card-section impact">
+            <ul>
+              <li>1 - Ferramenta desenvolvida com foco em engenharia de plataforma e GitOps</li>
+              <li>2 - Atualização nos backups do RDS de Produção e Desenvolvimento</li>
+              <li>3 - Gestão de infraestrutura (k8s)</li>
+              <li>4 - Gestão de variáveis de ambiente</li>
+              <li>5 - Acesso aos containers via terminal e visualização de logs em tempo real</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           THAYSE
+      ════════════════════════════════════════════════════ -->
+
+      <!-- ── 08 · Biodiesel-Soja Laudos ───────────────── -->
+      <section class="slide slide-card"
+               data-file="biodiesel-citros.ts"
+               data-icon="🧪"
+               data-section="THAYSE"
+               data-presenter="Thayse">
+        <div class="card-meta">
+          <span class="card-id">agrotrace / projetos</span>
+          <span class="card-tag ct-deploy">QA / Laudos</span>
+        </div>
+        <h2 class="card-slide-title">Laudos Biodiesel-Soja & Projeto Citros</h2>
+        <div class="card-body triple">
+          <div class="card-section note">
+            <div class="section-label">BIODIESEL-SOJA</div>
+            <ul>
+              <li>1.      Deixar safra 25/26 > 26>27 no APP (tirar a visibilidade das outras safras) - Stand by</li>
+              <li>2.      No APP > Editar propriedade > tirar Atividade</li>
+              <li>3.      Não ser possível editar área</li>
+              <li>4.      Não ser possível editar nome da propriedade</li>
+              <li>5.      Não ser possível editar município/UF</li>
+              <li>6.      Onde desenha o croqui tem opções Propriedade, CAR, CAF, talhão – deixar só talhão</li>
+              <li>7.      Travar o desenho do croqui somente dentro do CAR cadastrado no sistema, assim como coleta de coordenadaF</li>
+            </ul>
+          </div>
+          <div class="card-section impact">
+            <div class="section-label">CITROS</div>
+            <ul>
+              <li>Criação/Edição dos formulários</li>
+              <li>Abertura de cards para ajustes e testes</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 09 · App Mobile ───────────────────────────── -->
+      <section class="slide slide-card"
+               data-file="auto-abertura-ticket.md"
+               data-icon="📱"
+               data-section="THAYSE"
+               data-presenter="Thayse">
+        <div class="card-meta">
+          <span class="card-id">Auto-Abertura-Ticket</span>
+          <span class="card-tag ct-deploy">Deploy</span>
+        </div>
+        <h2 class="card-slide-title">Auto-Abertura-Ticket</h2>
+        <div class="card-body triple">
+          <div class="card-section solution">
+            <div class="section-label">✓ Auto-Abertura-Ticket</div>
+            <ul>
+              <li>Apresentação de auto abertura de tickets no GLPI
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════
+           WRAP-UP
+      ════════════════════════════════════════════════════ -->
+
+      <!-- ── 14 · Exit ─────────────────────────────────── -->
+      <section class="slide slide-cover"
+               data-file="exit.ts"
+               data-icon="🚪"
+               data-section="WRAP-UP"
+               data-presenter="">
+        <div class="cover-left">
+          <div class="cover-edition">// FIM · EDITION #04</div>
+          <h1 class="cover-title">
+            Obrigado!<br>
+          </h1>
+          <div class="cover-meta">Próxima edição: 10/07/2026</div>
+        </div>
+        <div class="cover-right">
+          <div class="code-panel">
+            <div class="code-panel-header">
+              <span>🚪</span>
+              <span>exit.ts</span>
+            </div>
+            <div class="code-panel-body">
+<span class="c-kw">process</span>.<span class="c-prop">on</span>(<span class="c-str">"spotlight:end"</span>, () <span class="c-kw">=></span> <span class="c-brace">{</span>
+  <span class="c-prop">console</span>.<span class="c-cls">log</span>(<span class="c-str">"Thanks for watching!"</span>)
+  <span class="c-prop">questions</span>.<span class="c-cls">open</span>()
+  <span class="c-prop">nextEdition</span>.<span class="c-cls">schedule</span>(<span class="c-str">"10/07/2026"</span>)
+  <span class="c-kw">process</span>.<span class="c-cls">exit</span>(<span class="c-num">0</span>)
+<span class="c-brace">}</span>)
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /slides-container -->
+  </div><!-- /main -->
+
+  <!-- ─── Nav Bar ──────────────────────────────────────── -->
+  <div class="navbar">
+    <button class="nav-btn" id="nav-prev">← prev</button>
+    <div class="nav-dots" id="nav-dots"></div>
+    <span class="nav-counter" id="nav-counter">1 / 14</span>
+    <button class="nav-btn" id="nav-next">next →</button>
+    <span style="font-size:.7rem;color:#45475a;margin-left:1rem">
+      Use <kbd style="font-family:monospace;background:#1a2d45;border:1px solid #3d5060;border-radius:3px;padding:1px 5px;font-size:.65rem">←</kbd>
+      <kbd style="font-family:monospace;background:#1a2d45;border:1px solid #3d5060;border-radius:3px;padding:1px 5px;font-size:.65rem">→</kbd>
+      para navegar ·
+      <kbd style="font-family:monospace;background:#1a2d45;border:1px solid #3d5060;border-radius:3px;padding:1px 5px;font-size:.65rem">F</kbd> tela cheia ·
+      <kbd style="font-family:monospace;background:#1a2d45;border:1px solid #3d5060;border-radius:3px;padding:1px 5px;font-size:.65rem">T</kbd> cronômetro
+    </span>
+  </div>
+
+  <!-- ─── Status Bar ───────────────────────────────────── -->
+  <div class="statusbar">
+    <div class="statusbar-left">
+      <span class="status-item">● main</span>
+      <span class="status-item" id="status-file"></span>
+    </div>
+    <div class="statusbar-right">
+      <span class="status-item">DevOps Spotlight — DevOps Team</span>
+      <span class="status-item">19/06/2026</span>
+      <span class="status-item" id="status-presenter"></span>
+    </div>
+  </div>
+
+</div><!-- /vscode -->
+
+<script src="../spotlight.js"></script>
+<script src="../matrix.js"></script>
+</body>
+</html>
